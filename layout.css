@@ -1,0 +1,46 @@
+body {
+    background-color: RGB(220,220,220);
+}
+
+h1 {
+    text-align: center;
+    color: RGB(255,0,0);
+    align-items: 500px;
+    margin: 0px 0;
+}
+
+p {
+    color: RGB(0,0,255);
+}
+
+h3 {
+    color: #333;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0px 0;
+    align-items: 500px;
+}
+h2 {
+    color: #333;
+    text-align: right;
+    font-size: 1em;
+    margin: 0px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    table-layout: auto;
+    border: 1px solid #ccc;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

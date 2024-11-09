@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="layout.css">
+    <title>SGA Canteen</title>
+</head>
+
+<body>
+    <h2>
+        <button id="sendtodb" onclick="document.location='second_page.html'">Login</button> 
+    </h2>
+    <h1>Job Corps</h1>
+    <h3>SGA Canteen POS</h3>
+    <table id="Products">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Sales</th>
+                <th>Add/Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script src="Table.js"></script>
+        </tbody>
+    </table>
+    <th><button id="sendtodb" onclick="POSTdb()">Submit</button></th>
+    <script src="SubButton.js"></script>
+</body>
+</html>
