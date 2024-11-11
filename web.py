@@ -1,19 +1,18 @@
 import http.server
 import socketserver
 hostname = "localhost"
-serverport = 443
+serverport = 8000
 
 ## Handles HTTP Requests
 class SimpleWeb(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         return http.server.SimpleHTTPRequestHandler.do_GET(self)
     
-    
     def do_POST(self):
         self.send_response(200)
-        self.send_header('hello', 'text/html')
+        self.send_header('Content-type', 'text/html')
         self.end_headers()
-        self.wfile.write('Handled POST request')
+        self.wfile.write(bytes("<html><head><title>Title goes here.</title></head>/html>","utf-8"))
         http.server.SimpleHTTPRequestHandler.do_GET(self)
 
     

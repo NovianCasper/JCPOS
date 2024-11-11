@@ -1,13 +1,24 @@
-<!DOCTYPE html>
 <html>
-<body>
-    window.alert("Hello")
-<?php
-echo "<h2>PHP is Fun!</h2>";
-echo "Hello world!<br>";
-echo "I'm about to learn PHP!<br>";
-echo "This ", "string ", "was ", "made ", "with multiple parameters.";
-?> 
+    <body>
+        <?php
+        // define variables and set to empty values
+        $username = $password = "";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $username = test_input($_POST["username"]);
+            $password = test_input($_POST["password"]);
+            if ($username == "Casper" && $password == "123"){
+                header('Location: Financial.html');
+            }else{
+                header('Location: Login.html');
+            }
+        }
 
-</body>
+        function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+        }
+        ?>
+    </body>
 </html>
